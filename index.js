@@ -335,4 +335,4 @@ client.on('message', (message)=>{
   
 });
 
-client.login(process.ent.token);
+client.login(process.env.token);
