@@ -39,6 +39,7 @@ const client = new Client();
 client.on('ready', () => {
   console.log('I am ready!');
   client.user.setActivity('Administrator RBTeam');
+});
   
 client.on("messageCreate", (msg) => { // When a message is created
     if(msg.content === "!embed") { // If the message content is "!embed"
