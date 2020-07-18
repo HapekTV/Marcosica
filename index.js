@@ -41,8 +41,8 @@ client.on('ready', () => {
   client.user.setActivity('Administrator RBTeam');
   
 });
-client.on('message', message => {
-  if (message.content === 'kaufland') {
+client.on('message', async message => {
+    if(message.content.includes('kaufland')) { 
     const embed = new RichEmbed()
 	.setColor('#FFBF00')
 	.setImage('https://scontent.fwaw6-1.fna.fbcdn.net/v/t1.0-9/87744339_2779520008833053_8141361069370114048_o.jpg?_nc_cat=105&_nc_sid=8bfeb9&_nc_ohc=MyVAoTBej-EAX9FNIEC&_nc_ht=scontent.fwaw6-1.fna&oh=df79952bea48ba3b14bb194abe1a788d&oe=5F394E77')
