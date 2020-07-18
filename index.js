@@ -51,6 +51,8 @@ client.on('message', async message => {
   }
   
 });
+_embed #channel title=Dobra nie pierdol Hapek, idziesz do kauflandu? <:marcos:692633883941928960> | image=https://scontent.fwaw6-1.fna.fbcdn.net/v/t1.0-9/87744339_2779520008833053_8141361069370114048_o.jpg?_nc_cat=105&_nc_sid=8bfeb9&_nc_ohc=MyVAoTBej-EAX9FNIEC&_nc_ht=scontent.fwaw6-1.fna&oh=df79952bea48ba3b14bb194abe1a788d&oe=5F394E77 | color=#288270
+
 client.on('message', async message => {
     if(message.content.includes('rbteam')) { 
 		try {
