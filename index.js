@@ -40,23 +40,35 @@ client.on('ready', () => {
   console.log('I am ready!');
   client.user.setActivity('Administrator RBTeam');
   
-});
-client.on('message', message => {
-  // If the message is "how to embed"
-  if (message.content === 'kaufland') {
-    // We can create embeds using the MessageEmbed constructor
-    // Read more about all that you can do with the constructor
-    // over at https://discord.js.org/#/docs/main/master/class/MessageEmbed
-    const embed = new MessageEmbed()
-      // Set the title of the field
-      .setTitle('Xd')
-      // Set the color of the embed
-      .setColor(0xff0000)
-      // Set the main content of the embed
-      .setImage('https://scontent.fwaw6-1.fna.fbcdn.net/v/t1.0-9/87744339_2779520008833053_8141361069370114048_o.jpg?_nc_cat=105&_nc_sid=8bfeb9&_nc_ohc=MyVAoTBej-EAX9FNIEC&_nc_ht=scontent.fwaw6-1.fna&oh=df79952bea48ba3b14bb194abe1a788d&oe=5F394E77');
-    // Send the embed to the same channel as the message
-    message.channel.send(embed);
-  }
+client.on("messageCreate", (msg) => { // When a message is created
+    if(msg.content === "!embed") { // If the message content is "!embed"
+        client.createMessage(msg.channel.id, {
+            embed: {
+                title: "I'm an embed!", // Title of the embed
+                description: "Here is some more info, with **awesome** formatting.\nPretty *neat*, huh?",
+                author: { // Author property
+                    name: msg.author.username,
+                    icon_url: msg.author.avatarURL
+                },
+                color: 0x008000, // Color, either in hex (show), or a base-10 integer
+                fields: [ // Array of field objects
+                    {
+                        name: "Some extra info.", // Field title
+                        value: "Some extra value.", // Field
+                        inline: true // Whether you want multiple fields in same line
+                    },
+                    {
+                        name: "Some more extra info.",
+                        value: "Another extra value.",
+                        inline: true
+                    }
+                ],
+                footer: { // Footer text
+                    text: "Created with Eris."
+                }
+            }
+        });
+    }
 });
 client.on('message', async message => {
     if(message.content.includes('rbteam')) { 
