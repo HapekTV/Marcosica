@@ -39,7 +39,7 @@ const client = new Client();
 client.on('ready', () => {
   console.log('I am ready!');
   client.user.setActivity('Jakieś RBTeam xD');
-  client.user.setStatus('idle')
+  client.user.setStatus('dnd')
  
 });
 
