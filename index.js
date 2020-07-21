@@ -36,7 +36,7 @@ const { Client, RichEmbed } = require('discord.js');
 
 const client = new Client();
 
-client.on('Idle', () => {
+client.on('idle', () => {
   console.log('I am ready!');
   client.user.setActivity('Jakieś RBTeam xD');
  
