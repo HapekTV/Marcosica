@@ -38,8 +38,7 @@ const client = new Client();
 
 client.on('ready', () => {
   console.log('I am ready!');
-  client.user.setActivity('Jakieś RBTeam xD');
-  client.user.setStatus('dnd')
+  client.user.setActivity('Jakieś RBTeam xD', { type: 'LISTENING'}).catch(console.error);
  
 });
 
